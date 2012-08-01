@@ -4,6 +4,6 @@ class Url < ActiveRecord::Base
   validates :url, presence: true
   # validates :shortened_url, uniqueness: true
   
-  
+  validate :vanity, presence: true
   
 end

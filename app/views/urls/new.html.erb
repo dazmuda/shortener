@@ -6,6 +6,11 @@
     <%= form.text_field :url %>
   </p>
 
+  <p>
+	<%= form.label :vanity, "Would you like a vanity URL? Put it here:" %>	
+	<%= form.text_field :vanity %>
+  </p>
+  
   <p class='buttons'>
     <%= form.submit "Shorten my URL" %>
   </p>

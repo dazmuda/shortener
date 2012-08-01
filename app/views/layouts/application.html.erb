@@ -9,10 +9,9 @@
 </head>
 
 <body>
-	<% if flash[:shortened_id].present? %>
+	<% if flash[:shortened_vanity].present? %>
 	  <p class='shortened-link'>
-	    Right click and copy <%= link_to 'this link',
-	url_url(flash[:shortened_id]) %>
+	    Right click and copy <%= link_to 'this link', url_url(flash[:shortened_vanity]) %>
 	    to grab your link.
 	  </p>
 	<% end %>
