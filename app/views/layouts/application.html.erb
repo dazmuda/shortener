@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shortener</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+	<% if flash[:shortened_id].present? %>
+	  <p class='shortened-link'>
+	    Right click and copy <%= link_to 'this link',
+	url_url(flash[:shortened_id]) %>
+	    to grab your link.
+	  </p>
+	<% end %>
+<%= yield %>
+</body>
+
+</html>
